@@ -1,0 +1,46 @@
+@font-face { font-family: 'Prata'; src: url('fonts/Prata-Regular.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: 'Miranda Sans'; src: url('fonts/MirandaSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Miranda Sans'; src: url('fonts/MirandaSans-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Miranda Sans'; src: url('fonts/MirandaSans-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+
+:root {
+  --bg: #FBFBFB; --surface: #FFFFFF; --subtle: #F4F4F4; --line: #DEDEDE;
+  --text: #111111; --muted: #5E5E5E; --accent: #0D1F3C; --accent-subtle: #EEF4FA;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F1012; --surface: #18191C; --subtle: #1F2125; --line: #2E3136;
+    --text: #F2F2F2; --muted: #A6A6A6; --accent: #D6E4F2; --accent-subtle: #1B2433;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.6 'Miranda Sans', -apple-system, system-ui, sans-serif;
+}
+header, main, footer { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); text-decoration: none; font: 24px/1 'Prata', Georgia, serif; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; }
+nav a { color: var(--muted); text-decoration: none; padding: 6px 0; }
+nav a:hover { color: var(--text); text-decoration: underline; }
+main { padding-top: 24px; padding-bottom: 48px; }
+h1 { font: 36px/1.2 'Prata', Georgia, serif; margin: 16px 0 12px; }
+h2 { font-size: 21px; font-weight: 600; margin: 36px 0 8px; }
+h3 { font-size: 18px; font-weight: 600; margin: 24px 0 6px; }
+p, li { color: var(--text); }
+ul, ol { padding-left: 22px; }
+li { margin: 4px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+code { font-size: 0.9em; background: var(--subtle); padding: 1px 5px; border-radius: 4px; }
+.table { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--surface); }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-weight: 600; background: var(--subtle); }
+tr:last-child td { border-bottom: 0; }
+.draft { background: var(--accent-subtle); color: var(--accent); border-radius: 12px; padding: 10px 14px; font-size: 15px; }
+.cards { list-style: none; padding: 0; display: grid; gap: 12px; }
+.cards a { display: block; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--text); font-weight: 600; }
+.cards a:hover { border-color: var(--muted); }
+footer { padding-top: 20px; padding-bottom: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
